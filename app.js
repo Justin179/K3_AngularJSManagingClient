@@ -7,10 +7,18 @@ app.set('view engine', 'ejs');
 // setup static resource(empty files)
 app.use('/assets', express.static(__dirname + '/public'));
 
+
+    var people = [
+        {name:'John Doe'},
+        {name:'Jane Doe'},
+        {name: 'Jim Doe'}
+    ];
+
+
 // localhost:3000
 app.get('/', function(req, res) {
 	
-	res.render('index'); // 會自動找views目錄下的index
+	res.render('index',{serverPeople:people}); // 會自動找views目錄下的index
 	
 });
 
