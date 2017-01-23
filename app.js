@@ -1,10 +1,10 @@
 var express = require('express');
 var app = express();
 
-// ejs view
+// tell express i will use ejs as my view engine (template engine)
 app.set('view engine', 'ejs');
 
-// static resource(empty files)
+// setup static resource(empty files)
 app.use('/assets', express.static(__dirname + '/public'));
 
 // localhost:3000
